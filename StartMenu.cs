@@ -38,7 +38,7 @@ namespace Projekt2_BlackJack
 
             while (!check)
             {
-                int eingabe = Eingabe();
+                decimal eingabe = Eingabe();
 
                 if (eingabe == 1 && kasse.Balance == 0)
                 {
@@ -72,15 +72,15 @@ namespace Projekt2_BlackJack
                 }
             }
         }
-        public static int Eingabe()
+        public static decimal Eingabe()
         {
-            int eingabe = 0;
+            decimal eingabe = 0;
             bool checkEingabe = false;
 
             while (!checkEingabe)
             {
                 Console.Write("Eingabe: ");
-                if (int.TryParse(Console.ReadLine(), out int input))
+                if (decimal.TryParse(Console.ReadLine(), out decimal input))
                 {
                     eingabe = input;
                     checkEingabe = true;

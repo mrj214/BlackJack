@@ -74,7 +74,7 @@ namespace Projekt2_BlackJack
                     NeuesSpiel();
                 }
 
-                int eingabe = Startmenu.Eingabe();
+                decimal eingabe = Startmenu.Eingabe();
 
                 if (eingabe == 1)
                 {
