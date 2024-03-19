@@ -44,7 +44,7 @@ namespace Projekt2_BlackJack
             {
                 einsatz = Auswahl();
 
-                if (einsatz > 0 || einsatz <= kasse.Balance)
+                if (einsatz > 0 && kasse.Balance >= 0 || einsatz <= kasse.Balance && kasse.Balance >= 0)
                 {
                     ersterZug = true;
                     deck.KartenMischen();
@@ -53,10 +53,19 @@ namespace Projekt2_BlackJack
                     KarteDealer();
                     SpielerhandAnzeigen();
                     DealerhandAnzeigen();
-                    SpielerAuswahl();                    
+                    SpielerAuswahl();
                 }
                 else
-                    Console.WriteLine("Der Einsatz muss positiv sein und darf dein Guthaben nicht überschreiten");               
+                {
+                    kasse.Unentschieden(einsatz);
+                    Console.ForegroundColor= ConsoleColor.Red;
+                    Console.WriteLine("\nDer Einsatz muss positiv sein und darf dein Guthaben nicht überschreiten.\n");
+                    Console.ResetColor();
+                    Console.WriteLine("Gebe 0 ein um ins Hauptmenu zu gelagen und lade dein Konto auf!");
+                    Console.Write("Weiter mit beliebiger Taste...");
+                    Console.ReadKey();
+
+                }
             }
         }
         void SpielerAuswahl()
