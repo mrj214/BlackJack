@@ -88,7 +88,9 @@ namespace Projekt2_BlackJack
                 }
                 else
                 {
-                    Console.WriteLine("Bitte gebe eine gültige Zahl ein!");
+                    Console.ForegroundColor= ConsoleColor.Red;
+                    Console.WriteLine("\nBitte gebe eine gültige Zahl ein!\n");
+                    Console.ResetColor();
                     checkEingabe = false;
                 }
             }

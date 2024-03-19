@@ -167,7 +167,11 @@ namespace Projekt2_BlackJack
                     Environment.Exit(0);
                 }
                 else
-                    Console.WriteLine("Falsche Eingabe, bitte erneut versuchen");
+                {
+                    Console.ForegroundColor= ConsoleColor.Red;
+                    Console.WriteLine("\nFalsche Eingabe, bitte erneut versuchen\n");
+                    Console.ResetColor();
+                }
             }
 
         }
