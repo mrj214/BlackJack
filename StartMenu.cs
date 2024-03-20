@@ -26,6 +26,8 @@ namespace Projekt2_BlackJack
             Console.WriteLine("[3] Spiel beenden\n");
             Console.ResetColor();
             MenuOption();
+            Spiel.ersteAbfrage = false;
+
         }
         void MenuOption()
         {

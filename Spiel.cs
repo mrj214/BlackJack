@@ -14,28 +14,28 @@ namespace Projekt2_BlackJack
         Kasse kasse = kasse;
         decimal einsatz;
         bool ersterZug = true;
-        //bool ersteAbfrage = true;
+        public static bool ersteAbfrage = true;
 
         Hand spielerHand = new();
         Hand dealerHand = new();
         Deck deck = new();
-        //Spieler spieler = new();
+        Spieler spieler = new();
         Startmenu menu = new(kasse);
 
         public decimal Auswahl()
         {
-            //if (ersteAbfrage)
-            //{
-            //    Console.Clear();
-            //    Startmenu.Logo();
-            //    spieler.NamenEingeben();
-            //    ersteAbfrage = false;
-            //}
+            if (ersteAbfrage)
+            {
+                Console.Clear();
+                Startmenu.Logo();
+                spieler.NamenEingeben();
+                ersteAbfrage = false;
+            }
 
             Console.Clear();
             Startmenu.Logo();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"\t\t\t\t\tVerfügbares Guthaben: {kasse.Balance} Euro\n\n");
+            Console.WriteLine($"\t\t\t\t\tHallo {spieler.Name} dein Verfügbares Guthaben beträgt: {kasse.Balance} Euro\n\n");
             Console.ResetColor();
             Console.WriteLine("Welchen Betrag möchtest du setzen? (0) Hauptmenu\n");
             decimal einsatz = Startmenu.Eingabe();
