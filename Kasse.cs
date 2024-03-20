@@ -16,7 +16,7 @@ namespace Projekt2_BlackJack
         }
         public void Aufgeben(decimal einsatz)
         {
-            Balance = Balance + einsatz * 0.5M;
+            Balance += einsatz * 0.5M;
         }
         public void ChipsAufladen()
         {
@@ -36,11 +36,11 @@ namespace Projekt2_BlackJack
         }     
         public void Einsatz(decimal einsatz)
         {
-            Balance = Balance - einsatz;
+            Balance -= einsatz;
         }
         public void Unentschieden(decimal einsatz)
         {
-            Balance = Balance + einsatz;
+            Balance += einsatz;
         }
     }
 }

@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Kasse kasse = new Kasse();
-            Startmenu menu = new Startmenu(kasse);
+            Kasse kasse = new();
+            Startmenu menu = new(kasse);
             menu.DisplayMenu();
         }
     }

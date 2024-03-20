@@ -14,19 +14,13 @@ namespace Projekt2_BlackJack
         Herz, 
         Karo   
     }
-    internal class Karten
+    internal class Karten(Farbe farbe, string wert)
     {
         public static readonly string[] Werte = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
-        public string Wert { get; set; }
-        public Farbe Farbe { get; set; }
-        public int Punkte { get; set; }
+        public string Wert { get; set; } = wert;
+        public Farbe Farbe { get; set; } = farbe;
+        public int Punkte { get; set; } = BerechnePunkte(wert);
 
-        public Karten(Farbe farbe, string wert)
-        {
-            Farbe = farbe;
-            Wert = wert;
-            Punkte = BerechnePunkte(wert);
-        }
         public override string ToString()
         {
             var symbol = Farbe switch
@@ -39,19 +33,14 @@ namespace Projekt2_BlackJack
             };
             return $"[{Wert}{symbol}] ";       
         }
-        private int BerechnePunkte(string wert)
+        private static int BerechnePunkte(string wert)
         {
-            switch (wert)
+            return wert switch
             {
-                case "A":
-                    return 11; 
-                case "J":
-                case "Q":
-                case "K":
-                    return 10; 
-                default:
-                    return int.Parse(wert);
-            }
+                "A" => 11,
+                "J" or "Q" or "K" => 10,
+                _ => int.Parse(wert),
+            };
         }
 
     }

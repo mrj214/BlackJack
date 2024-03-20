@@ -8,7 +8,7 @@ namespace Projekt2_BlackJack
 {
     internal class Hand
     {
-        public List<Karten> Karten {  get; set; } = new List<Karten>();
+        public List<Karten> Karten {  get; set; } = [];
         public void KarteHinzufuegen(Karten karte)
         {
             Karten.Add(karte);

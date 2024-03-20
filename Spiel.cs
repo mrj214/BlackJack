@@ -14,13 +14,13 @@ namespace Projekt2_BlackJack
         Kasse kasse = kasse;
         decimal einsatz;
         bool ersterZug = true;
-        bool ersteAbfrage = true;
+        //bool ersteAbfrage = true;
 
-        Hand spielerHand = new Hand();
-        Hand dealerHand = new Hand();
-        Deck deck = new Deck();
-        Spieler spieler = new Spieler();
-        Startmenu menu = new Startmenu(kasse);
+        Hand spielerHand = new();
+        Hand dealerHand = new();
+        Deck deck = new();
+        //Spieler spieler = new();
+        Startmenu menu = new(kasse);
 
         public decimal Auswahl()
         {

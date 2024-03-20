@@ -8,14 +8,9 @@ using System.Threading.Tasks;
 
 namespace Projekt2_BlackJack
 {
-    internal class Startmenu
+    internal class Startmenu(Kasse kasse)
     {
-        Kasse kasse;
-
-        public Startmenu(Kasse kasse)
-        {
-            this.kasse = kasse;
-        }
+        Kasse kasse = kasse;
 
         public static void Logo()
         {
@@ -51,7 +46,7 @@ namespace Projekt2_BlackJack
                     switch (eingabe)
                     {
                         case 1:
-                            Spiel spiel = new Spiel(kasse);
+                            Spiel spiel = new(kasse);
                             spiel.Spielstart();
                             check = true;
                             break;
@@ -82,8 +77,6 @@ namespace Projekt2_BlackJack
                 Console.Write("Eingabe: ");
                 if (decimal.TryParse(Console.ReadLine(), out decimal input))
                 {
-                    eingabe = input;
-                    checkEingabe = true;
                     return input;
                 }
                 else

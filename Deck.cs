@@ -11,7 +11,7 @@ namespace Projekt2_BlackJack
         List<Karten> karten;
         public Deck()
         {
-            karten = new List<Karten>();
+            karten = [];
             foreach (Farbe farbe in Enum.GetValues(typeof(Farbe)))
             {
                 foreach (string wert in Karten.Werte)
@@ -22,15 +22,13 @@ namespace Projekt2_BlackJack
         }
         public void KartenMischen()
         {
-            Random rnd = new Random();
+            Random rnd = new();
             int n = karten.Count;
             while (n > 1)
             {
                 n--;
                 int k = rnd.Next(n + 1);
-                Karten temp = karten[k];
-                karten[k] = karten[n];
-                karten[n] = temp;
+                (karten[n], karten[k]) = (karten[k], karten[n]);
             }
         }
         public Karten KarteZiehen()
