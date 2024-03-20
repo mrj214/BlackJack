@@ -20,7 +20,7 @@ namespace Projekt2_BlackJack
 
             while (gesamtpunkte > 21 && anzahlAsse > 0)
             {
-                gesamtpunkte -= 10; // Ein Ass von 11 auf 1 Punkte reduzieren
+                gesamtpunkte -= 10; 
                 anzahlAsse--;
             }
             return gesamtpunkte;

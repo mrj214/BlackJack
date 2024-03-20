@@ -44,13 +44,13 @@ namespace Projekt2_BlackJack
             switch (wert)
             {
                 case "A":
-                    return 11; // Ass kann später angepasst werden
+                    return 11; 
                 case "J":
                 case "Q":
                 case "K":
-                    return 10; // Bildkarten sind 10 Punkte wert
+                    return 10; 
                 default:
-                    return int.Parse(wert); // Numerische Karten entsprechen ihrem Wert
+                    return int.Parse(wert);
             }
         }
 

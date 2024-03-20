@@ -24,7 +24,7 @@ namespace Projekt2_BlackJack
         public void DisplayMenu()
         {
             Console.Clear();
-            Logo();
+            Logo();         
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("[1] Spiel starten");
             Console.WriteLine("[2] Geld einzahlen");

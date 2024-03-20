@@ -14,6 +14,7 @@ namespace Projekt2_BlackJack
         Kasse kasse = kasse;
         decimal einsatz;
         bool ersterZug = true;
+        bool ersteAbfrage = true;
 
         Hand spielerHand = new Hand();
         Hand dealerHand = new Hand();
@@ -23,6 +24,14 @@ namespace Projekt2_BlackJack
 
         public decimal Auswahl()
         {
+            //if (ersteAbfrage)
+            //{
+            //    Console.Clear();
+            //    Startmenu.Logo();
+            //    spieler.NamenEingeben();
+            //    ersteAbfrage = false;
+            //}
+
             Console.Clear();
             Startmenu.Logo();
             Console.ForegroundColor = ConsoleColor.Green;
