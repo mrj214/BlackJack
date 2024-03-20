@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
+            Spieler spieler = new Spieler();
             Kasse kasse = new();
-            Startmenu menu = new(kasse);
+            Startmenu menu = new(kasse, spieler);
             menu.DisplayMenu();
         }
     }

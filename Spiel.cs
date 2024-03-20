@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace Projekt2_BlackJack
 {
-    internal class Spiel(Kasse kasse)
+    internal class Spiel(Kasse kasse, Spieler spieler)
     {
         Kasse kasse = kasse;
+        Spieler spieler = spieler;
         decimal einsatz;
         bool ersterZug = true;
         public static bool ersteAbfrage = true;
@@ -19,8 +20,7 @@ namespace Projekt2_BlackJack
         Hand spielerHand = new();
         Hand dealerHand = new();
         Deck deck = new();
-        Spieler spieler = new();
-        Startmenu menu = new(kasse);
+        Startmenu menu = new(kasse, spieler);
 
         public decimal Auswahl()
         {
