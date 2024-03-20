@@ -1,13 +1,4 @@
-﻿using Projekt2_BlackJack;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-
-namespace Projekt2_BlackJack
+﻿namespace Projekt2_BlackJack
 {
     internal class Spiel(Kasse kasse, Spieler spieler)
     {
